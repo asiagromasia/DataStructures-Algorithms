@@ -27,10 +27,10 @@ public class RadixSortwQueue {
     }
     public static void radixSort(int[] list) {
         // initialize array of 10 queues for digit value 0-9
-        Queue<Integer>[] bucket = new Queue[10];
+        Queue<Integer>[] bucket = new LinkedList[10];
             //creates 10 buckets 
             for (int i = 0; i < bucket.length; i++) {
-            bucket[i] = new LinkedList<Integer>();
+            bucket[i] = new LinkedList<>();
             }
         // move to/from buckets repeatedly until sorted
         int digit = 1;
